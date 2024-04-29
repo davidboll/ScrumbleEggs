@@ -1,8 +1,9 @@
-import React from 'react';
+import styles from './Hero.module.css'
 
 function Hero() {
     return (
-      <section className="hero h-screen flex flex-col items-center">
+      <>
+      <section className="hero flex flex-col items-center">
         <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
           Scrum Guide{" "}
           <span className="bg-gradient-to-r from-blue-500 to-red-800 text-transparent bg-clip-text">
@@ -26,6 +27,12 @@ function Hero() {
           </a>
         </div>
       </section>
+      <section className={styles.container}>
+        <h2>This is a test</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit accusamus, ea nulla eum vero sit consequuntur dolores temporibus provident. Quo voluptates consequatur repellat qui. Ipsam praesentium voluptatibus sunt illo soluta!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, ipsa esse ratione laborum officiis ad nostrum voluptatem sed saepe! Possimus eius odit beatae neque asperiores. Aliquam veritatis reprehenderit ab laudantium.</p>
+      </section>
+      </>
     );
   }
   
