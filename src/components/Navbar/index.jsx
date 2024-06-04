@@ -8,10 +8,16 @@ import { motion } from "framer-motion";
 export default function ScrumNavBar({ isDarkMode, toggleTheme }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleMenuItemClick = () => {
+    setTimeout(() => {
+      setIsMenuOpen(false);
+    }, 800);
+  };
+
   return (
     <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
-        {/* Below is the Desktop Navbar  */}
+        {/* Below is the Desktop Navbar */}
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="sm:hidden" />
         <NavbarBrand>
           <Logo isMenuOpen={isMenuOpen} />
@@ -19,22 +25,22 @@ export default function ScrumNavBar({ isDarkMode, toggleTheme }) {
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
           <NavbarItem>
-            <Link color="foreground" href="#">
+            <Link href="#mainContent" color="foreground" className="cursor-pointer">
               Learn scrum
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="#">
+            <Link href="#ourTeam" color="foreground" className="cursor-pointer">
               Our Team
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="#">
+            <Link href="#mainContent" color="foreground" className="cursor-pointer">
               Dive in
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="#">
+            <Link href="#ourTeam" color="foreground" className="cursor-pointer">
               Contact Us
             </Link>
           </NavbarItem>
@@ -63,7 +69,12 @@ export default function ScrumNavBar({ isDarkMode, toggleTheme }) {
                   transform: "rotate(360deg)",
                 }}
               >
-                <Link color="foreground" href="#" className={`${styles.menuItems} h-16 w-40 px-3 flex items-center justify-center border border-foreground rounded-lg`}>
+                <Link
+                  href="#mainContent"
+                  color="foreground"
+                  onClick={handleMenuItemClick}
+                  className={`${styles.menuItems} cursor-pointer h-16 w-40 px-3 flex items-center justify-center border border-foreground rounded-lg`}
+                >
                   <span className={styles.menuLinks}> Learn Scrum </span>
                 </Link>
               </motion.div>
@@ -81,7 +92,12 @@ export default function ScrumNavBar({ isDarkMode, toggleTheme }) {
                   transform: "rotate(360deg)",
                 }}
               >
-                <Link color="foreground" href="#" className={`${styles.menuItems} h-16 w-40 px-3 flex items-center justify-center border border-foreground rounded-lg`}>
+                <Link
+                  href="#ourTeam"
+                  color="foreground"
+                  onClick={handleMenuItemClick}
+                  className={`${styles.menuItems} cursor-pointer h-16 w-40 px-3 flex items-center justify-center border border-foreground rounded-lg`}
+                >
                   <span className={styles.menuLinks}> Our Team </span>
                 </Link>
               </motion.div>
@@ -99,7 +115,12 @@ export default function ScrumNavBar({ isDarkMode, toggleTheme }) {
                   transform: "rotate(360deg)",
                 }}
               >
-                <Link color="foreground" href="#" className={`${styles.menuItems} h-16 w-40 px-3 flex items-center justify-center border border-foreground rounded-lg`}>
+                <Link
+                  href="#mainContent"
+                  color="foreground"
+                  onClick={handleMenuItemClick}
+                  className={`${styles.menuItems} cursor-pointer h-16 w-40 px-3 flex items-center justify-center border border-foreground rounded-lg`}
+                >
                   <span className={styles.menuLinks}> Dive In </span>
                 </Link>
               </motion.div>
@@ -117,7 +138,12 @@ export default function ScrumNavBar({ isDarkMode, toggleTheme }) {
                   transform: "rotate(360deg)",
                 }}
               >
-                <Link color="foreground" href="#" className={`${styles.menuItems} h-16 w-40 px-3 flex items-center justify-center border border-foreground rounded-lg`}>
+                <Link
+                  href="#ourTeam"
+                  color="foreground"
+                  onClick={handleMenuItemClick}
+                  className={`${styles.menuItems} cursor-pointer h-16 w-40 px-3 flex items-center justify-center border border-foreground rounded-lg`}
+                >
                   <span className={styles.menuLinks}> Contact Us </span>
                 </Link>
               </motion.div>
