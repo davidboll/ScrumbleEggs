@@ -1,6 +1,6 @@
 import ScrumNavBar from "./components/Navbar";
 import ButtonComponent from "./components/Button";
-import Hero from "./components/Hero";
+import Hero from "./components/Hero/index.jsx";
 import Footer from "./components/Footer";
 import MainContent from "./components/MainContent";
 import OurTeam from "./components/OurTeam/OurTeam.jsx";
