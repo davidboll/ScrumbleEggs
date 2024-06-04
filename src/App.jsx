@@ -3,7 +3,7 @@ import ButtonComponent from "./components/Button";
 import Hero from "./components/Hero/index.jsx";
 import Footer from "./components/Footer";
 import MainContent from "./components/MainContent";
-import OurTeam from "./components/OurTeam/OurTeam";
+import OurTeam from "./components/OurTeam/OurTeam.jsx";
 import HighlightedFeature from "./components/HighlightedFeature";
 import feature1 from "./assets/images/feature1.png";
 import feature2 from "./assets/images/feature2.png";
@@ -30,7 +30,7 @@ function App() {
       <ScrumNavBar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       <Hero isDarkMode={isDarkMode} />
       <MainContent />
-      <HighlightedFeature title="Feature Title" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris." images={[feature1, feature2]} />
+      <HighlightedFeature title="Scrum Master Skills" text="While the Scrum Master needs a good set of skills. Agile Scrum, Collaboration, Adaptability, Conflict resolution, Problem solving, coaching, Project Management and leadership are to take into consideration." images={[feature1, feature2]} />
       <OurTeam />
       <Footer />
     </>
